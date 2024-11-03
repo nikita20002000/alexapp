@@ -1,0 +1,306 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    background: url('../media/background.jpg');
+    background-attachment: fixed;
+
+}
+
+#mainPageContainer {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+#helloContainer {
+    margin: 0;
+    overflow: hidden; /* Скрываем прокрутку */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.word {
+    font-size: clamp(2rem, 10.5vw, 10rem);
+    color: #ca67d3;
+    position: absolute;
+    opacity: 0; /* Скрываем слова по умолчанию */
+    transition: opacity 0.5s ease; /* Плавный переход для появления */
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#topRoundedContainer {
+    background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    border-radius: 15px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Полупрозрачная граница */
+    color: #fff; /* Цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 800px;
+    margin: auto;
+    position: relative;
+    /* padding-top: 200px; */
+    height: 400px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+
+.roundedAlexPic {
+    border-radius: 25%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: -65%;
+    transform: translate(-50%, 0px);
+}
+
+.roundedAlexPic img {
+    width: 400px;
+    height: 400px;
+}
+
+#alexGrandText {
+    position: absolute;
+    top: 45%;
+    font-size: clamp(1rem, 10.5vw, 2rem);
+    font-weight: 500;
+    color: rgb(172 96 166 / 91%)
+}
+
+.slide-down-button {
+    visibility: hidden;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    background: rgb(255 255 255 / 10%);
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.slide-down-button svg {
+    color: #b184a5;
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s ease;
+}
+
+.slide-down-button:hover svg {
+    transition: all .5s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.slide-down-button:hover {
+    background: rgb(255 255 255 / 30%);
+}
+
+
+#cardsView {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+/*СТИЛИ картинок ПАРЯЩИХ*/
+.img-fun {
+    position: absolute;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.img-fun#img-1 {
+    border-radius: 20px;
+    left: 15%;
+    top: 15%;
+    transform: rotate(-12deg);
+}
+
+#img-1 img {
+    width: 300px;
+    height: 350px;
+}
+
+.img-fun#img-2 {
+    border-radius: 20px;
+    right: 15%;
+    top: 15%;
+    transform: rotate(12deg);
+}
+
+#img-2 img {
+    width: 300px;
+    height: 350px;
+}
+
+.img-fun#img-3 {
+    border-radius: 20px;
+    left: 15%;
+    bottom: 15%;
+    transform: rotate(-6deg);
+}
+
+#img-3 img {
+    width: 300px;
+    height: 350px;
+}
+
+.img-fun#img-4 {
+    border-radius: 20px;
+    right: 15%;
+    bottom: 15%;
+    transform: rotate(6deg);
+}
+
+#img-4 img {
+    width: 300px;
+    height: 350px;
+}
+
+
+.img-fun#img-5 {
+    border-radius: 100px;
+    right: 3%;
+    bottom: 42%;
+}
+
+#img-5 img {
+    width: 200px;
+    height: 200px;
+}
+
+.img-fun#img-6 {
+    border-radius: 100px;
+    left: 3%;
+    bottom: 42%;
+    transform: rotate(6deg);
+}
+
+#img-6 img {
+    width: 200px;
+    height: 200px;
+}
+
+#mainImages {
+    display: none;
+}
+
+
+
+/*----------------------*/
+
+
+
+
+#cardsView .header a {
+    text-decoration: none;
+}
+
+#cardsView .header {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#cardsView .header .back-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #a34fab;
+}
+
+#cardsView .header .back-button span {
+    color: #a34fab;
+    font-size: 24px;
+}
+
+
+.section-name {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    font-family: "Oi", serif;
+}
+
+.section-name:hover span {
+    font-size: 3rem;
+    transition: all .5s;
+}
+
+#settings svg {
+    width: 30px;
+    height: 30px;
+    color: #a34fab;
+    transition: all .5s;
+}
+
+#settings:hover svg {
+    width: 40px;
+    height: 40px;
+    transition: all .5s;
+}
+
+.section-name span {
+    color: #a34fab;
+    font-size: clamp(1rem, 10.5vw, 2rem);
+    transition: all .5s;
+}
+
+.back-button:hover svg {
+    width: 30px;
+    height: 30px;
+    fill: #8e3a95;
+}
+
+.back-button:hover span {
+    font-size: 30px;
+    color: #8e3a95;
+}
+
+
+.fun-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* color: #fff; */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.card-title {
+    color: #a34fab;
+}
+
+.card-body p {
+    font-size: 18px;
+}
+
+#cards {
+    overflow: scroll;
+    height: 86vh;
+}
