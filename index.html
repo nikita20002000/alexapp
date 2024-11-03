@@ -102,23 +102,23 @@
                 </div>
 
                 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mb-4">
-                    <div class="fun-card card">
+                    <a class="fun-card card" href="#compliments" type="button" style="text-decoration: none">
                         <img src="media/apps/compliments.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title">Комплиментум</h2>
                             <p class="card-text">Слушай бесконечное количество теплых слов в любое время</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mb-4">
-                    <div class="fun-card card">
+                    <a class="fun-card card" href="#kwiz" type="button" style="text-decoration: none">
                         <img src="media/apps/kwiz.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title">Квизадиум</h2>
                             <p class="card-text">Подборка самых сложных тематических квизов</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mb-4">
@@ -143,13 +143,13 @@
                 </div>
 
                 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4 mt-sm-0">
-                    <div class="fun-card card">
+                    <a class="fun-card card" type="button" href="#math" style="text-decoration: none" id="goToMathButton">
                         <img src="media/apps/math.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title">Математика 5кл.</h2>
                             <p class="card-text">Узнай проценты и не только</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4 mt-sm-0">
@@ -164,6 +164,40 @@
 
 
             </div>
+        </div>
+    </section>
+
+    <section id="kwiz">
+        <div class="header ms-4 me-4 mt-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <a class="back-button d-flex align-items-center justify-content-start" type="button" href="#cardsView">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi me-2 bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+                    </svg>
+                    <span>Дэшборд</span>
+                </a>
+
+                <div class="text-center section-name">
+                    <span>Квизадиум</span>
+                </div>
+
+                <div id="settings" class="me-2" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex mt-4 me-4 ms-4 glass-container" id="hellKwiz">
+            <span>Ответь на все вопросы квизадиума для получения основного подарка на День Рождения! Вопросы могут быть с подвохом и содержать ненормативную лексику. В случае провала можно повторно вернуться к прохождению квизадиума</span>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center me-4 ms-4 mt-4" id="kwizadiumContainer">
+            <button class="btn btn-primary" id="kwizadiumStartButton">Начать квизадиум </button>
+        </div>
+        <div class="d-flex justify-content-center align-items-center me-4 ms-4 mt-4" dataQ="1" id="nextQButton" style="visibility: hidden">
+            <button class="btn btn-primary">Ответить </button>
         </div>
     </section>
 
@@ -202,6 +236,41 @@
             <h3 style="font-size: 40px; color: #2f2f2f"></h3>
         </div>
 
+    </section>
+
+    <section id="compliments">
+        <div class="header ms-4 me-4 mt-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <a class="back-button d-flex align-items-center justify-content-start" type="button" href="#cardsView">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi me-2 bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+                    </svg>
+                    <span>Дэшборд</span>
+                </a>
+
+                <div class="text-center section-name">
+                    <span>Комплиментум</span>
+                </div>
+
+                <div id="settings" class="me-2" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex me-4 ms-4 glass-container mt-4">
+            <span>Скучно или нечем заняться?! Хватай комплимент! Совершенно бесплатно и в любое время суток</span>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center mt-4" id="getComplimentButton">
+            <button class="btn btn-primary">Получить комплимент</button>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5 glass-container me-4 ms-4" id="complimentsContainer" style="visibility: hidden">
+            <span style="font-size: 1.4rem; color: #9a25d1; font-weight: 600;"></span>
+        </div>
     </section>
 
     <section id="flowers">
@@ -282,7 +351,7 @@
                     <span>Помощь</span>
                 </div>
             </div>
-            <div id="driverRating" class="d-flex align-items-center justify-content-center m-5">
+            <div id="driverRating" class="d-flex align-items-center justify-content-center m-4">
                 <div class="d-flex flex-row">
                     <div class="star star-1 me-2 ms-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -315,6 +384,204 @@
             <div id="infoRating" class="d-flex align-items-center justify-content-center">
                 <span>Спасибо за вашу оценку</span>
             </div>
+        </div>
+    </section>
+
+    <section id="math">
+        <div class="header ms-4 me-4 mt-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <a class="back-button d-flex align-items-center justify-content-start" type="button" href="#cardsView" style="text-decoration: none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi me-2 bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+                    </svg>
+                    <span>Дэшборд</span>
+                </a>
+
+                <div class="text-center section-name">
+                    <span>Математика</span>
+                </div>
+
+                <div id="settings" class="me-2" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex ms-4 me-4 mt-4" id="tableContainer">
+            <table class="">
+                <thead>
+                <tr>
+                    <th>×</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <th scope="row">1</th>
+                    <th scope="row">2</th>
+                    <th scope="row">3</th>
+                    <th scope="row">4</th>
+                    <th scope="row">5</th>
+                    <th scope="row">6</th>
+                    <th scope="row">7</th>
+                    <th scope="row">8</th>
+                    <th scope="row">9</th>
+                    <th scope="row">10</th>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <th scope="row">2</th>
+                    <th scope="row">4</th>
+                    <th scope="row">6</th>
+                    <th scope="row">8</th>
+                    <th scope="row">10</th>
+                    <th scope="row">12</th>
+                    <th scope="row">14</th>
+                    <th scope="row">16</th>
+                    <th scope="row">18</th>
+                    <th scope="row">20</th>
+
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <th scope="row">3</th>
+                    <th scope="row">6</th>
+                    <th scope="row">9</th>
+                    <th scope="row">12</th>
+                    <th scope="row">15</th>
+                    <th scope="row">18</th>
+                    <th scope="row">21</th>
+                    <th scope="row">24</th>
+                    <th scope="row">27</th>
+                    <th scope="row">30</th>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <th scope="row">4</th>
+                    <th scope="row">8</th>
+                    <th scope="row">12</th>
+                    <th scope="row">16</th>
+                    <th scope="row">20</th>
+                    <th scope="row">24</th>
+                    <th scope="row">28</th>
+                    <th scope="row">32</th>
+                    <th scope="row">36</th>
+                    <th scope="row">40</th>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <th scope="row">5</th>
+                    <th scope="row">10</th>
+                    <th scope="row">15</th>
+                    <th scope="row">20</th>
+                    <th scope="row">25</th>
+                    <th scope="row">30</th>
+                    <th scope="row">35</th>
+                    <th scope="row">40</th>
+                    <th scope="row">45</th>
+                    <th scope="row">50</th>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <th scope="row">6</th>
+                    <th scope="row">12</th>
+                    <th scope="row">18</th>
+                    <th scope="row">24</th>
+                    <th scope="row">30</th>
+                    <th scope="row">36</th>
+                    <th scope="row">42</th>
+                    <th scope="row">48</th>
+                    <th scope="row">54</th>
+                    <th scope="row">60</th>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <th scope="row">7</th>
+                    <th scope="row">14</th>
+                    <th scope="row">21</th>
+                    <th scope="row">28</th>
+                    <th scope="row">35</th>
+                    <th scope="row">42</th>
+                    <th scope="row">49</th>
+                    <th scope="row">56</th>
+                    <th scope="row">63</th>
+                    <th scope="row">70</th>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <th scope="row">8</th>
+                    <th scope="row">16</th>
+                    <th scope="row">24</th>
+                    <th scope="row">32</th>
+                    <th scope="row">40</th>
+                    <th scope="row">48</th>
+                    <th scope="row">56</th>
+                    <th scope="row">64</th>
+                    <th scope="row">72</th>
+                    <th scope="row">80</th>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <th scope="row">9</th>
+                    <th scope="row">18</th>
+                    <th scope="row">27</th>
+                    <th scope="row">36</th>
+                    <th scope="row">45</th>
+                    <th scope="row">54</th>
+                    <th scope="row">63</th>
+                    <th scope="row">72</th>
+                    <th scope="row">81</th>
+                    <th scope="row">90</th>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <th scope="row">10</th>
+                    <th scope="row">20</th>
+                    <th scope="row">30</th>
+                    <th scope="row">40</th>
+                    <th scope="row">50</th>
+                    <th scope="row">60</th>
+                    <th scope="row">70</th>
+                    <th scope="row">80</th>
+                    <th scope="row">90</th>
+                    <th scope="row">100</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="d-flex me-4 ms-4 mt-3" id="percentDesc">
+            <span>
+                Чтобы посчитать процент от числа, следуйте этим простым шагам:
+                Определите число: Это число, от которого вы хотите найти процент. Например, пусть это будет 200.
+                Определите процент: Это процент, который вы хотите вычислить. Например, 15%.
+                Используйте формулу: Умножьте число на процент и разделите на 100. Формула выглядит так:
+                Процент
+                =
+                (
+                Число
+                ×
+                Процент
+                100
+                )
+                Процент=(
+                100
+                Число×Процент
+                ​
+                 )
+            </span>
         </div>
     </section>
 

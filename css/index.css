@@ -67,7 +67,7 @@
 
     .img-fun#img-5 {
         right: 38%!important;
-        bottom: 19%!important;
+        bottom: 22%!important;
     }
 
     #img-5 img {
@@ -196,7 +196,7 @@ body {
 .slide-down-button {
     visibility: hidden;
     position: absolute;
-    bottom: 3%;
+    bottom: 14%;
     left: 50%;
     width: 80px;
     height: 80px;
@@ -229,7 +229,10 @@ body {
 #cardsView,
 #cutie-meter,
 #flowers,
-#taxiRating {
+#taxiRating,
+#math,
+#compliments,
+#kwiz {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -328,14 +331,20 @@ body {
 
 #cardsView .header a,
 #cutie-meter .header a,
-#flowers .header a {
+#flowers .header a,
+#math .header a,
+#kwiz .header a,
+#compliments .header a {
     text-decoration: none;
 }
 
 #cardsView .header,
 #cutie-meter .header,
 #flowers .header,
-#taxiRating .header {
+#taxiRating .header,
+#math .header,
+#compliments .header,
+#kwiz .header {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
@@ -356,7 +365,10 @@ body {
 #cardsView .header .back-button span,
 #cutie-meter .header .back-button span,
 #flowers .header .back-button span,
-#taxiRating .header .back-button span {
+#taxiRating .header .back-button span,
+#math .header .back-button span,
+#compliments .header .back-button span,
+#kwiz .header .back-button span {
     color: #a34fab;
     font-size: 24px;
 }
@@ -370,7 +382,7 @@ body {
 }
 
 .section-name:hover span {
-    font-size: 3rem;
+    font-size: 2rem!important;
     transition: all .5s;
 }
 
@@ -427,7 +439,7 @@ body {
 
 #cards {
     overflow: scroll;
-    height: 86vh;
+    height: 76vh;
 }
 
 
@@ -587,3 +599,37 @@ body {
 }
 
 /*-----*/
+
+/*Математика */
+/*-----------*/
+#tableContainer, #percentDesc {
+    transition: all .5s;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: all .5s;
+}
+
+th {
+    background: transparent;
+}
+
+table {
+    width: 100%;
+}
+
+.glass-container {
+    transition: all .5s;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+/*-----------*/
