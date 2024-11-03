@@ -5,9 +5,7 @@
         font-size: 1.2rem!important;
     }
 
-    #cardsView .header .back-button span,
-    #cutie-meter .header .back-button span,
-    #flowers .header .back-button span {
+   .back-button span {
         display: none;
     }
 
@@ -84,13 +82,32 @@
 
     .img-fun#img-6 {
         left: 38% !important;
-        top: 5% !important;
+        bottom: 88% !important;
     }
 
     .slide-down-button {
         width: 60px!important;
         height: 60px!important;
         padding: 0!important;
+    }
+
+    .cutie-button-container {
+        transform: translate(-72px, 0px) !important;
+    }
+
+    #cutieResult {
+        width: fit-content !important;
+        text-wrap: nowrap !important;
+        bottom: 23% !important;
+        left: 55% !important;
+    }
+
+    #cutieResult h3 {
+        font-size: 28px!important;
+    }
+
+    #mapContainer img {
+        width: 350px!important;
     }
 }
 
@@ -211,7 +228,8 @@ body {
 
 #cardsView,
 #cutie-meter,
-#flowers {
+#flowers,
+#taxiRating {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -308,13 +326,16 @@ body {
 
 
 
-#cardsView .header a, #cutie-meter .header a {
+#cardsView .header a,
+#cutie-meter .header a,
+#flowers .header a {
     text-decoration: none;
 }
 
 #cardsView .header,
 #cutie-meter .header,
-#flowers .header {
+#flowers .header,
+#taxiRating .header {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
@@ -326,9 +347,7 @@ body {
     text-align: center;
 }
 
-#cardsView .header .back-button svg,
-#cutie-meter.header .back-button svg,
-#flowers.header .back-button svg {
+.back-button svg {
     width: 24px;
     height: 24px;
     fill: #a34fab;
@@ -336,7 +355,8 @@ body {
 
 #cardsView .header .back-button span,
 #cutie-meter .header .back-button span,
-#flowers .header .back-button span {
+#flowers .header .back-button span,
+#taxiRating .header .back-button span {
     color: #a34fab;
     font-size: 24px;
 }
@@ -457,10 +477,18 @@ body {
 }
 
 #cutieResult {
+    visibility: hidden;
     position: absolute;
     bottom: 25%;
-    left: 50%;
+    left: 48%;
     transform: translate(-220px, 0px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
 /*-------------*/
 
@@ -489,3 +517,73 @@ body {
     transition: all .5s;
 }
 /*----------------*/
+
+
+/*ТАКСИ*/
+/*-----*/
+#mapContainer img {
+    width: 800px;
+    border-radius: 30px;
+}
+
+#taxiContainer {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: all .5s;
+}
+
+#driverCard img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+#question {
+    background: #d9d2d2b8;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#question svg {
+    width: 50px;
+    height: 50px;
+    fill: #9a25d1;
+}
+
+.star-1 svg,
+.star-2 svg,
+.star-3 svg,
+.star-4 svg,
+.star-5 svg {
+    width: 28px;
+    height: 28px;
+    fill: #c6a6a6;
+}
+
+.clicked-star{
+    fill: #9a25d1;
+}
+
+#infoRating {
+    visibility: hidden;
+    transition: all .5s;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: all .5s;
+}
+
+/*-----*/

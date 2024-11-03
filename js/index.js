@@ -34,6 +34,7 @@ window.onload = function() {
 $('.cutie-button').on('click', function() {
     var percent = Math.floor(Math.random() * 101); // Генерирует случайное число от 0 до 100
     $('#cutieResult h3').text(`Сегодня вы на ${percent}% милашка `);
+    $('#cutieResult').css('visibility', 'visible');
 })
 
 
@@ -64,3 +65,14 @@ $('#createFlowersButton').on('click', function() {
 function getPercentForAbs() {
     return Math.floor(Math.random() * 101); // Генерирует случайное число от 0 до 100
 }
+
+
+$("#goToTaxiButton").on('click', function() {
+    $('#timeNow').text(new Date().getHours() + ':' + new Date().getMinutes());
+});
+
+
+$('.star').on('click', function() {
+    $('#driverRating').hide(500);
+    $('#infoRating').css('visibility', 'visible');
+})
