@@ -73,6 +73,6 @@ $("#goToTaxiButton").on('click', function() {
 
 
 $('.star').on('click', function() {
-    $('#driverRating').hide(500);
+    $('#driverRating').css('visibility', 'hidden');
     $('#infoRating').css('visibility', 'visible');
 })
