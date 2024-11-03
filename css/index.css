@@ -1,3 +1,100 @@
+/*АДАПТИВ*/
+/*IPHONE*/
+@media screen and (min-width: 0px) and (max-width: 430px)  {
+    .section-name span {
+        font-size: 1.2rem!important;
+    }
+
+    #cardsView .header .back-button span,
+    #cutie-meter .header .back-button span,
+    #flowers .header .back-button span {
+        display: none;
+    }
+
+    #topRoundedContainer {
+        width: 380px !important;
+    }
+    #alexGrandText {
+        font-size: 1.6rem!important;
+    }
+
+    .roundedAlexPic img {
+        width: 250px!important;
+        height: 250px!important;
+    }
+
+    .roundedAlexPic {
+        top: -32% !important;
+    }
+
+    .img-fun#img-1 {
+        left: 5%!important;
+        top: 9% !important;
+    }
+
+    #img-1 img {
+        width: 100px!important;
+        height: 150px!important;
+    }
+
+    .img-fun#img-2 {
+        right: 5% !important;
+        top: 9% !important;
+    }
+
+    #img-2 img {
+        width: 100px!important;
+        height: 150px!important;
+    }
+
+    .img-fun#img-3 {
+        left: 5%!important;
+        bottom: 15% !important;
+    }
+
+    #img-3 img {
+        width: 100px!important;
+        height: 150px!important;
+    }
+
+    #img-4 img {
+        width: 100px!important;
+        height: 150px!important;
+    }
+
+    .img-fun#img-4 {
+        right: 5%!important;
+        bottom: 15% !important;
+    }
+
+    .img-fun#img-5 {
+        right: 38%!important;
+        bottom: 19%!important;
+    }
+
+    #img-5 img {
+        width: 100px!important;
+        height: 100px!important;
+    }
+
+    #img-6 img {
+        width: 100px!important;
+        height: 100px!important;
+    }
+
+    .img-fun#img-6 {
+        left: 38% !important;
+        top: 5% !important;
+    }
+
+    .slide-down-button {
+        width: 60px!important;
+        height: 60px!important;
+        padding: 0!important;
+    }
+}
+
+
 html {
     scroll-behavior: smooth;
 }
