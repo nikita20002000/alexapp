@@ -30,3 +30,37 @@ $(document).ready(function() {
 window.onload = function() {
     window.scrollTo(0, 0); // Прокручиваем страницу в верхний левый угол
 };
+
+$('.cutie-button').on('click', function() {
+    var percent = Math.floor(Math.random() * 101); // Генерирует случайное число от 0 до 100
+    $('#cutieResult h3').text(`Сегодня вы на ${percent}% милашка `);
+})
+
+
+// Создание цветочной поляны
+$('#createFlowersButton').on('click', function() {
+    for (let i = 0; i < 100; i++) {
+        let pT = getPercentForAbs()
+        let pD = getPercentForAbs()
+        $('#flowersContainer').append(`<span class="flower-i" style="top: ${pT}%; left: ${pD}%">🌹</span>`);
+        pT = getPercentForAbs();
+        pD = getPercentForAbs();
+        $('#flowersContainer').append(`<span class="flower-i" style="top: ${pT}%; left: ${pD}%">🌸</span>`);
+        pT = getPercentForAbs();
+        pD = getPercentForAbs();
+        $('#flowersContainer').append(`<span class="flower-i" style="top: ${pT}%; left: ${pD}%">💐</span>`);
+        pT = getPercentForAbs();
+        pD = getPercentForAbs();
+        $('#flowersContainer').append(`<span class="flower-i" style="top: ${pT}%; left: ${pD}%">🌺</span>`);
+        pT = getPercentForAbs();
+        pD = getPercentForAbs();
+        $('#flowersContainer').append(`<span class="flower-i" style="top: ${pT}%; left: ${pD}%">🌷</span>`);
+        pT = getPercentForAbs();
+        pD = getPercentForAbs();
+        $('#flowersContainer').append(`<span class="flower-i" style="top: ${pT}%; left: ${pD}%">🌻</span>`);
+    }
+})
+
+function getPercentForAbs() {
+    return Math.floor(Math.random() * 101); // Генерирует случайное число от 0 до 100
+}

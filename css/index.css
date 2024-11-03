@@ -112,7 +112,9 @@ body {
 }
 
 
-#cardsView {
+#cardsView,
+#cutie-meter,
+#flowers {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -209,11 +211,13 @@ body {
 
 
 
-#cardsView .header a {
+#cardsView .header a, #cutie-meter .header a {
     text-decoration: none;
 }
 
-#cardsView .header {
+#cardsView .header,
+#cutie-meter .header,
+#flowers .header {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
@@ -225,13 +229,17 @@ body {
     text-align: center;
 }
 
-#cardsView .header .back-button svg {
+#cardsView .header .back-button svg,
+#cutie-meter.header .back-button svg,
+#flowers.header .back-button svg {
     width: 24px;
     height: 24px;
     fill: #a34fab;
 }
 
-#cardsView .header .back-button span {
+#cardsView .header .back-button span,
+#cutie-meter .header .back-button span,
+#flowers .header .back-button span {
     color: #a34fab;
     font-size: 24px;
 }
@@ -304,3 +312,83 @@ body {
     overflow: scroll;
     height: 86vh;
 }
+
+
+/* МИЛАШКОМЕТР */
+/*-------------*/
+
+#cutie-meter {
+    position: relative;
+}
+
+.cutie-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60px, 0px);
+}
+
+.cutie-button {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: all .5s;
+}
+
+.cutie-button svg {
+    width: 72px;
+    height: 72px;
+}
+
+.cutie-button-container span {
+    font-size: 3rem;
+    color: #8e3a95;
+}
+
+
+.cutie-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: all .5s;
+}
+
+.cutie-button:hover svg {
+    fill: #8e3a95;
+}
+
+#cutieResult {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-220px, 0px);
+}
+/*-------------*/
+
+
+/*ЦВЕТОЧНАЯ ПОЛЯНА*/
+/*----------------*/
+#flowersContainer {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+}
+
+.flower-i {
+    font-size: 120px;
+    position: absolute;
+}
+
+#createFlowersButton {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: all .5s;
+}
+/*----------------*/
